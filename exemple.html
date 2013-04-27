@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Cartes postales anciennes/Photos contemporaines </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div id="container">
+ <div><img alt="before" src="./images/eglise/Place_de_lEglise_exposure_carte.jpg" width="600" height="366" /></div>
+ <div><img alt="after" src="./images/eglise/Place_de_lEglise_exposure_real.jpg" width="600" height="366" /></div>
+</div>
+
+<script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="./js/jquery.beforeafter-1.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#container').beforeAfter();
+
+});
+</script>
+  </body>	
+</html>
