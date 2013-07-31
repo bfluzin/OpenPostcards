@@ -582,6 +582,7 @@ a:focus {
 .row-fluid .offset3:first-child {
   margin-left: 25.53191489361702%;
   *margin-left: 25.425531914893618%;
+  margin-top: 50px;
 }
 
 .row-fluid .offset2 {
