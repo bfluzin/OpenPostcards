@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta charset="utf-8">
 
     <!-- Les styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,6 +18,12 @@
       body {
         padding-top: 20px;
         padding-bottom: 60px;
+      }
+
+      .hideMenu {
+        
+        top: -75px;
+
       }
 
       /* Custom container */
@@ -40,6 +47,7 @@
       .jumbotron .lead {
         font-size: 24px;
         line-height: 1.25;
+        padding-top: 120px;
       }
       .jumbotron .btn {
         font-size: 21px;
@@ -56,6 +64,9 @@
 
 
       /* Customize the navbar links to be fill the entire space of the .navbar */
+      .navbar {
+        transition : top 1s;
+      }
       .navbar .navbar-inner {
         padding: 0;
       }
@@ -83,6 +94,52 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+
+      .menu0 .bar {
+        width:5%!important;
+      }
+      .menu1 .bar {
+        width:10%!important;
+      }
+
+      .menu2 .bar {
+        width:20%!important;
+      }
+
+      .menu3 .bar {
+        width:30%!important;
+      }
+
+      .menu4 .bar {
+        width:40%!important;
+      }
+
+
+      .menu5 .bar {
+        width:50%!important;
+      }
+
+      .menu6 .bar {
+        width:60%!important;
+      }
+
+      .menu7 .bar {
+        width:70%!important;
+      }
+
+      .menu8 .bar {
+        width:80%!important;
+      }
+
+      .menu9 .bar {
+        width:90%!important;
+      }
+      
+      .menu10 .bar {
+        width:100%!important;
+      }
+
+
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -99,9 +156,11 @@
                                    <link rel="shortcut icon" href="ico/favicon.png">
   </head>
 
-  <body>
+  <body id="step0" data-spy="scroll" data-target=".navbar-example">
+  
+  <div id="content" >
 
-    <div class="container">    
+    <div  class="container" >    
 
       <div class="masthead">
       
@@ -111,36 +170,36 @@
  <div class="okfn-ribbon" style="float: right;position: relative;margin-right: 10%;">
               <a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a>
             </div>
-            <div class="container">
+            <div class="container navbar-example">
         
-              <ul class="nav" style="font-size:80%;">
-     			<li><a class="brand" href="#">Steps</a></li>
-                <li><a href="step1.html">#1 find</a></li>
-                <li><a href="step2.html">#2 capture</a></li>
-                <li><a href="step3.html">#3 upload</a></li>
-                <li><a href="step4.html">#4 Hugin</a></li>
-                <li><a href="step5.html">#5 Adjust</a></li>
-                <li><a href="step6.html">#6 Crop</a></li>
-                <li><a href="step7.html">#7 Export</a></li>
-                <li><a href="step8.html">#8 Convert</a></li>
-                <li><a href="step9.html">#9 Wikimedia</a></li>
-                <li><a href="step10.html">#10 Embed!</a></li>
+              <ul class="nav nav-tabs" style="font-size:80%;">
+     			<li class="menu-item" id="menu0"><a class="brand" href="#step0"><img src="images/logo-small.png" width="130" height="142"></a></li>
+                <li class="menu-item" id="menu1"><a href="#step1">#1 find</a></li>
+                <li class="menu-item" id="menu2"><a href="#step2">#2 capture</a></li>
+                <li class="menu-item" id="menu3"><a href="#step3">#3 upload</a></li>
+                <li class="menu-item" id="menu4"><a href="#step4">#4 Hugin</a></li>
+                <li class="menu-item" id="menu5"><a href="#step5">#5 Adjust</a></li>
+                <li class="menu-item" id="menu6"><a href="#step6">#6 Crop</a></li>
+                <li class="menu-item" id="menu7"><a href="#step7">#7 Export</a></li>
+                <li class="menu-item" id="menu8"><a href="#step8">#8 Convert</a></li>
+                <li class="menu-item" id="menu9"><a href="#step9">#9 Wikimedia</a></li>
+                <li class="menu-item" id="menu10"><a href="#step10">#10 Embed!</a></li>
               </ul>
          			</div>
 			   
-                <div class="progress progress-success progress-striped" style="margin-bottom: 0px">
+                <div id="progressBar" class="progress progress-success progress-striped" style="margin-bottom: 0px">
   				<div class="bar" style="width: 5%;"></div>
             </div>
           </div>
         </div><!-- /.navbar -->
-      </div>
+     
 
       <!-- Jumbotron -->
 
-      <div class="jumbotron">
-        <h1><img src="images/logo.png" alt="open postcards"/></h1>
-        <p class="lead">In less than 30 minutes, you will enjoy a past and present view of a public place using open content, open data and open source software.</p>
-              <p><a class="btn btn-large btn-success" href="step1.html">Ready? Let's find postcards</a></p>
+      <div id="step0" class="jumbotron">
+        <h1><img src="images/logo.png" alt="open postcards"/></h1><br/>
+        <p>In less than 30 minutes, you will enjoy a past and present view of a public place using open content, open data and open source software.</p>
+              <p class="menu-item"><a class="btn btn-large btn-success" href="#step1">Ready? Let's find postcards</a></p>
       </div>
       <div class="row-fluid">
           <div class="span8">
@@ -156,30 +215,162 @@
           </div>
       </div>
 
-      <hr>
+
+<!-- Jumbotron -->
+
+      <div id="step1" class="jumbotron">
+        <p class="lead"><b>Step 1. Find your original image</b></p>
+        <p> To start, we are going to need an old image in public domain which you are able to locate, access and take a current picture.<br/>
+        You basically have 3 options for finding a picture : </p>
+
+      </div>
+      <div class="row-fluid"><small>
+      <div class="offset1 span9 offset1"><div class="row-fluid">
+      <div class="span4"><p class="lead"><img src="images/step1/commons.png" width="88" height="100" style="display:block;margin: 0 auto"></p>
+        <p class="lead">Find an available image on Wikimedia Commons</p>
+        <p>Wikimedia Commons allows you to find open content you can reuse freely. You can find them by looking for postcards in the <a href="http://commons.wikimedia.org/wiki/Main_Page">search engine</a> or in the various categories placed in the <a href="http://commons.wikimedia.org/wiki/Category:Postcards">main postcard category</a>. </p></div>
+      <div class="span4"><p class="lead"><img src="images/step1/scan.png" width="108" height="100" style="display:block;margin: 0 auto"></p>
+        <p class="lead">Scan an old public domain postcard or picture</p>
+        <p>If you use a scanner, make sure you use a resolution of at least 200 dpi in the settings. </p><p> You don't own a scanner ? No worry, you can just your digital camera and then crop the image.</p></div>
+      <div class="span4"><p class="lead"><img src="images/step1/claim.png" width="144" height="100" style="display:block;margin: 0 auto"></p>
+        <p class="lead">Ask your city for image archives</p>
+        <p>Most cities hold an archive composed with old postcards and photographs which now belong to the public domain or could be released under <a href="http://creativecommons.org/">creative commons license.</a> Some cities like Paris own an amazing digitalized photographs base payed by tax-payer money but they don't release it under an open license which would allow reuse for Open Postcards. </p><p> Claim your right to give a second life to this  <a href="http://canadp-archivesenligne.paris.fr/documents_figures/_collections_photos/visu_photo.php?id_ark_photo=11967&cote=11Fi%202069">amazing content!</a></p></div></small>
+      <div class="row-fluid">
+      <div class="offset3 span6 offset3 menu-item">  <a class="btn btn-large btn-success" style="display:block;margin:auto" href="#step2">Allright? Now let's go see how it looks like now!</a>    </div>
+      </div> 
+      </div></div></div>
+
+
+
+ <!-- Jumbotron -->
+
+      <div id="step2" class="jumbotron">
+        <p class="lead"><b>Step 2. Take a present image</b></p>
+        <p> This step is the coolest part : you go out and take a picture of the current state of what figures in your original image. <br/>
+        Here are some advice before you go out in the wild! </p>
+      </div>
+
+      
+      <div class="row-fluid">
+        <div class="offset1 span9 offset1">
+          <div class="row-fluid">
+            <div class="span4">
+              <p class="lead"><img src="images/step2/location_03.png" width="95" height="100" style="display:block;margin: 0 auto"></p>
+              <p class="lead">Find the exact location the picture was taken</p>
+            <p>Make sure you printed the picture before leaving or on a mobile device.<br/>Once you locate the place your picture was taken, find the orientation of the photograph back in the days.</p>
+            </div>
+          <div class="span4">
+                <p class="lead"><img src="images/step2/photo_03.png" width="104" height="98" style="display:block;margin: 0 auto"></p><p class="lead">Orient and frame your picture</p>
+            <p>Take the printed picture and try to have the same frame as the original picture. <br/> Tips: use roofs, gutter, lampposts, as markers for orienting your picture. Some may not have moved or changed in the past 10 decades. </p>
+          </div>
+          <div class="span4">
+          <p class="lead"><img src="images/step2/frame_03.png" width="108" height="100" style="display:block;margin: 0 auto"></p>
+                    <p class="lead">Take many pictures!</p>
+            <p> Don't be shy, press the button many times! Try different angles and different settings so that you find the perfect picture.</p>
+          </div>
+          </div>
+     <div class="row-fluid">
+      <div class="offset3 span6 offset3 menu-item">  <a class="btn btn-large btn-success" style="display:block;margin:auto" href="#step3">Allright? Let's upload your pictures!</a>    </div>
+     </div>
+        </div>
+
+      </div>
+     </div>
+
+
+     <div id="step3"class="jumbotron">
+        <p class="lead"><b>Step 3. Upload your images on Wikimedia Commons</b></p>
+        <p> You have already done some creative work while taking pictures. Upload it on Wikimedia Commons so that your picture feed the Wikipedia pages of the places you're shooting and allow others to create with your images.<br/>
+        It is really easy to upload your pictures on Wikimedia Commons: </p>
+
+      </div>
+      <div class="row-fluid">
+      <div class="offset1 span9 offset1"><div class="row-fluid">
+      <div class="span4"><img src="images/step3/createaccount.jpg" style="display:block;margin: 0 auto"></div>
+      <div class="span4"><img src="images/step3/copyright.png" width="100px" style="display:block;margin: 0 auto"></div>
+      <div class="span4"><img src="images/step3/upload.jpg" width="250px" style="display:block;margin: 0 auto"></div>
+      </div></div></div>
+      <div class="row-fluid"><small>
+      <div class="offset1 span9 offset1"><div class="row-fluid">
+      <div class="span4"><p class="lead">Create an account</p><p>You trust Wikipedia for many things, don't you? Well, trust them, it's really ease to <a href="http://commons.wikimedia.org/wiki/Special:UserLogin/signup">create an account</a>. </p></div>
+      <div class="span4"><p class="lead">Is that legal?</p><p>Wikimedia Commons will give you a list of cases in the <a href="http://commons.wikimedia.org/wiki/Special:UploadWizard">Upload Wizard</a>. Make sure you have the rights to upload the pictures you will be using. Read the documentation, it's pretty simple. </p></div>
+      <div class="span4"><p class="lead">Describe your pictures</p><p>There are millions of pictures on Wikimedia Commons. The more details you will provide on your picture, the more chance your picture will have to be found by someone and reused. Also don't forget to include categories to link your pictures with other relevant content.   </p></div></small>
+      <div class="row-fluid">
+      <div class="offset3 span6 offset3 menu-item">  <a class="btn btn-large btn-success" style="display:block;margin:auto" href="#step4">Allright? Let's play with the pictures!</a>    </div>
+      </div> 
+      </div></div></div>
+
+
+      <div id="step4" class="jumbotron">
+        <p class="lead"><b>Step 4. Install Hugin, the software for aligning the pictures.</b></p>
+        <p> From now on, we will use an open source software called Hugin which allows pictures to be aligned for creating panoramas and also visualising before/after images.<br/></p>
+    <a href="http://sourceforge.net/projects/hugin/files/latest/download" target="_blank"><button type="button" class="btn btn-warning">Download Hugin for PC, Mac or Linux</button></a>
+      </div>
+      <div class="row-fluid">
+      <div class="offset1 span9 offset1"><div class="row-fluid">
+      <div class="span4"><img src="images/step4/linux.png" style="display:block;margin: 0 auto"></div>
+      <div class="span4"><img src="images/step4/mac.jpg" width="200px" style="display:block;margin: 0 auto"></div>
+      <div class="span4"><img src="images/step4/pc.png" style="display:block;margin: 0 auto"></div>
+      </div></div></div>
+      <div class="row-fluid"><small>
+      <div class="offset1 span9 offset1"><div class="row-fluid">
+      <div class="span4"><p class="lead">Using Linux?</p><p>After download, install the package by merely following the instructions. </p></div>
+      <div class="span4"><p class="lead">Using MacOS?</p><p>Download and install the package by opening the file Huginstaller.pkg. Follow the steps. </p></div>
+      <div class="span4"><p class="lead">Using Windows?</p><p>Download and install the package. Follow the steps. </p></div></small>
+      <div class="row-fluid">
+      <div class="offset3 span6 offset3 menu-item">  <a class="btn btn-large btn-success" style="display:block;margin:auto" href="#step5">Allright? Now let's go see how it looks like now!</a>    </div>
+      </div> 
+      </div></div></div>
+
+
+      <div id="step5" class="jumbotron">
+        <p class="lead">Step 5</p>
+        Coming soon
+      </div>
+
+      <div id="step6" class="jumbotron">
+              <p class="lead">Step 6</p>
+        Coming soon
+      </div>
+
+      <div id="step7" class="jumbotron">
+              <p class="lead">Step 7</p>
+        Coming soon
+      </div>
+
+      <div id="step8" class="jumbotron">
+              <p class="lead">Step 8</p>
+        Coming soon
+      </div>
+
+      <div id="step9" class="jumbotron">
+              <p class="lead">Step 9</p>
+        Coming soon
+      </div>
+
+      <div id="step10" class="jumbotron">
+              <p class="lead">Step 10</p>
+        Coming soon
+      </div>
+
+
 
       <div class="footer">
         <p>&copy; Company 2013</p>
       </div>
 
     </div> <!-- /container -->
+        </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/action.js"></script>
+    
+
 
   </body>
 </html>
